@@ -7,13 +7,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class OneSum {
+public class Sum {
 
     private int[] nums = {1, 8, 2, 7, 6};
     private int target = 9;
     private List<int[]> result;
 
-    public OneSum(int[] nums, int target) {
+    public Sum(int[] nums, int target) {
         this.nums = nums;
         this.target = target;
     }
