@@ -5,6 +5,7 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.algorithm.difficult.Four;
 import com.example.algorithm.easy.Sum;
 
 import java.util.List;
@@ -15,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        testOneSum();
+        //testOneSum();
+        testFour();
     }
 
     private void testOneSum() {
@@ -27,6 +29,17 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0 ; i<result.size();i++){
             int[] temp = result.get(i);
             Log.d("test", "=====index: [" + temp[0] + ", " + temp[1] + "]");
+        }
+    }
+
+    private void testFour() {
+        int[] a = {4, 7, 98, 111};
+        int[] b = {0, 4, 8, 111, 123};
+
+        Four four = new Four();
+        int[] result = four.merge(a, b);
+        for (int i = 0 ; i<result.length;i++){
+            Log.d("test", result[i] + ", ");
         }
     }
 }
