@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.algorithm.difficult.Four;
 import com.example.algorithm.easy.Sum;
+import com.example.algorithm.medium.Five;
 
 import java.util.List;
 
@@ -17,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //testOneSum();
-        testFour();
+        //testFour();
+        testFive();
     }
 
     private void testOneSum() {
@@ -41,5 +43,11 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0 ; i<result.length;i++){
             Log.d("test", result[i] + ", ");
         }
+    }
+
+    private void testFive() {
+        Five five = new Five();
+        String result = five.getResult("jofiuofiowefijjfjsldfjuawef");
+        Log.d("test", "======" + result);
     }
 }
