@@ -9,6 +9,7 @@ import com.example.algorithm.difficult.Four;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.easy.Sum;
 import com.example.algorithm.medium.Five;
+import com.example.algorithm.medium.ThirtyThree;
 
 import java.util.List;
 
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         //testOneSum();
         //testFour();
         //testFive();
-        testThirtyTwo();
+        //testThirtyTwo();
+        testThirtyThree();
     }
 
     private void testOneSum() {
@@ -56,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
     private void testThirtyTwo() {
         ThirtyTwo thirtyTwo = new ThirtyTwo();
         int result = thirtyTwo.longestValidParentheses2("(())");
+        Log.d("test", "======" + result);
+    }
+
+    private void testThirtyThree() {
+        ThirtyThree thirtyThree = new ThirtyThree();
+        int result = thirtyThree.search(new int[]{9, 25, 38, 0, 3, 7}, 7);
         Log.d("test", "======" + result);
     }
 }
