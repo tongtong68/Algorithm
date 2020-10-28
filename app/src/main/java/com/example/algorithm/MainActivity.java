@@ -9,6 +9,8 @@ import com.example.algorithm.difficult.Four;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.easy.Sum;
 import com.example.algorithm.medium.Five;
+import com.example.algorithm.medium.ThirtyNine;
+import com.example.algorithm.medium.ThirtyOne;
 import com.example.algorithm.medium.ThirtyThree;
 
 import java.util.List;
@@ -23,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
         //testFour();
         //testFive();
         //testThirtyTwo();
-        testThirtyThree();
+        //testThirtyThree();
+        testThirtyNine();
     }
 
     private void testOneSum() {
@@ -64,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
     private void testThirtyThree() {
         ThirtyThree thirtyThree = new ThirtyThree();
         int result = thirtyThree.search(new int[]{9, 25, 38, 0, 3, 7}, 7);
+        Log.d("test", "======" + result);
+    }
+
+    private void testThirtyNine() {
+        ThirtyNine thirtyNine = new ThirtyNine();
+        List<List<Integer>> result = thirtyNine.combinationSum(new int[]{9, 2, 4, 0, 3, 7}, 7);
         Log.d("test", "======" + result);
     }
 }
