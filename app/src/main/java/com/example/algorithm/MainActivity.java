@@ -6,6 +6,7 @@ import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.algorithm.difficult.Four;
+import com.example.algorithm.difficult.FourtyTwo;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.easy.Sum;
 import com.example.algorithm.medium.Five;
@@ -26,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         //testFive();
         //testThirtyTwo();
         //testThirtyThree();
-        testThirtyNine();
+        //testThirtyNine();
+        testFourtyTwo();
     }
 
     private void testOneSum() {
@@ -73,6 +75,12 @@ public class MainActivity extends AppCompatActivity {
     private void testThirtyNine() {
         ThirtyNine thirtyNine = new ThirtyNine();
         List<List<Integer>> result = thirtyNine.combinationSum(new int[]{9, 2, 4, 0, 3, 7}, 7);
+        Log.d("test", "======" + result);
+    }
+
+    private void testFourtyTwo() {
+        FourtyTwo fourtyTwo = new FourtyTwo();
+        int result = fourtyTwo.trap3(new int[]{0,1,0,2,1,0,1,3,2,1,2,1});
         Log.d("test", "======" + result);
     }
 }
