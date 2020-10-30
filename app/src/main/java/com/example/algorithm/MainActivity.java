@@ -10,6 +10,7 @@ import com.example.algorithm.difficult.FourtyTwo;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.easy.Sum;
 import com.example.algorithm.medium.Five;
+import com.example.algorithm.medium.FortySix;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyOne;
 import com.example.algorithm.medium.ThirtyThree;
@@ -28,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         //testThirtyTwo();
         //testThirtyThree();
         //testThirtyNine();
-        testFourtyTwo();
+        //testFourtyTwo();
+        testFortySix();
     }
 
     private void testOneSum() {
@@ -82,5 +84,14 @@ public class MainActivity extends AppCompatActivity {
         FourtyTwo fourtyTwo = new FourtyTwo();
         int result = fourtyTwo.trap3(new int[]{0,1,0,2,1,0,1,3,2,1,2,1});
         Log.d("test", "======" + result);
+    }
+
+    private void testFortySix() {
+        FortySix fortySix = new FortySix();
+        List<List<Integer>> a = fortySix.permute2(new int[]{1, 2, 3, 4});
+        Log.d("test", "====排列总数：" + a.size());
+        for (List temp:a) {
+            Log.d("test", "====排列: [" + temp.get(0) + ", " + temp.get(1) + ", " + temp.get(2) + ", " + temp.get(3) + "]");
+        }
     }
 }
