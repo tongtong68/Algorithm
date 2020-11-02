@@ -10,6 +10,7 @@ import com.example.algorithm.difficult.FourtyTwo;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.easy.Sum;
 import com.example.algorithm.medium.Five;
+import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyOne;
@@ -30,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         //testThirtyThree();
         //testThirtyNine();
         //testFourtyTwo();
-        testFortySix();
+        //testFortySix();
+        testFortyEight();
     }
 
     private void testOneSum() {
@@ -93,5 +95,26 @@ public class MainActivity extends AppCompatActivity {
         for (List temp:a) {
             Log.d("test", "====排列: [" + temp.get(0) + ", " + temp.get(1) + ", " + temp.get(2) + ", " + temp.get(3) + "]");
         }
+    }
+
+    private void testFortyEight() {
+        FortyEight fortyEight = new FortyEight();
+        int[][] matrix = new int[][]{{1,2,3,4,5}, {6,7,8,9,10}, {11,12,13,14,15}, {16,17,18,19,20},{21, 22,23,24,25}};
+        for(int i=0; i<5; ++i) {
+            for(int j=0; j<5; ++j)
+                System.out.print(matrix[i][j] + ", ");
+            System.out.print("\n");//显示成数组的表现形式
+        }
+
+        System.out.print("\nmatrix length is: " + matrix.length + "\n");//显示成数组的表现形式
+
+        fortyEight.rotate2(matrix);
+
+        for(int i=0; i<5; ++i) {
+            for(int j=0; j<5; ++j)
+                System.out.print(matrix[i][j] + ", ");
+            System.out.print("\n");//显示成数组的表现形式
+        }
+
     }
 }
