@@ -9,6 +9,7 @@ import com.example.algorithm.difficult.Four;
 import com.example.algorithm.difficult.FourtyTwo;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.easy.Sum;
+import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
 import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         //testThirtyNine();
         //testFourtyTwo();
         //testFortySix();
-        testFortyEight();
+        //testFortyEight();
+        testFiftyFive();
     }
 
     private void testOneSum() {
@@ -116,5 +118,11 @@ public class MainActivity extends AppCompatActivity {
             System.out.print("\n");//显示成数组的表现形式
         }
 
+    }
+
+    private void testFiftyFive() {
+        FiftyFive fiftyFive = new FiftyFive();
+        boolean result = fiftyFive.canJump2();
+        Log.d("test", "======result: " + result);
     }
 }
