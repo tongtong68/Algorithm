@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.algorithm.difficult.Four;
 import com.example.algorithm.difficult.FourtyTwo;
 import com.example.algorithm.difficult.ThirtyTwo;
+import com.example.algorithm.easy.Seventy;
 import com.example.algorithm.easy.Sum;
 import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         //testFortyEight();
         //testFiftyFive();
         //testFiftyFive();
+        testSeventy();
     }
 
     private void testOneSum() {
@@ -125,5 +127,13 @@ public class MainActivity extends AppCompatActivity {
         FiftyFive fiftyFive = new FiftyFive();
         boolean result = fiftyFive.canJump2();
         Log.d("test", "======result: " + result);
+    }
+
+    private void testSeventy() {
+        Seventy seventy = new Seventy();
+        int result1 = seventy.climbStairs(20);
+        int result2 = seventy.getResult(20);
+        Log.d("test", "======result1: " + result1);
+        Log.d("test", "======result2: " + result2);
     }
 }
