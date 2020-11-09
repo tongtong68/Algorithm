@@ -17,6 +17,9 @@ public class Seventy {
         return result;
     }
 
+    //  动态规划
+    //  时间复杂度为 O(n)
+    //  空间复杂度为 O(1)
     public int climbStairs(int n) {
         int p = 0, q = 0, r = 1;
         for (int i = 1; i <= n; ++i) {
