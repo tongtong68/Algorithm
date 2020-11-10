@@ -14,6 +14,7 @@ import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
 import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
+import com.example.algorithm.medium.SeventyFive;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyOne;
 import com.example.algorithm.medium.ThirtyThree;
@@ -37,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
         //testFortyEight();
         //testFiftyFive();
         //testFiftyFive();
-        testSeventy();
+        //testSeventy();
+        testSeventyFive();
     }
 
     private void testOneSum() {
@@ -135,5 +137,16 @@ public class MainActivity extends AppCompatActivity {
         int result2 = seventy.getResult(20);
         Log.d("test", "======result1: " + result1);
         Log.d("test", "======result2: " + result2);
+    }
+
+    private void testSeventyFive() {
+        SeventyFive five = new SeventyFive();
+        int[] nums = new int[] {1, 2, 0, 1, 2, 0, 0, 2};
+        five.sortColors2(nums);
+        System.out.print("====result: ");
+        for (int j=0; j<nums.length; ++j) {
+            System.out.print(nums[j] + ", ");
+        }
+        System.out.print("\n");//显示成数组的表现形式
     }
 }
