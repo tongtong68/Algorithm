@@ -15,6 +15,7 @@ import com.example.algorithm.medium.Five;
 import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
 import com.example.algorithm.medium.SeventyFive;
+import com.example.algorithm.medium.SeventyNine;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyOne;
 import com.example.algorithm.medium.ThirtyThree;
@@ -39,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         //testFiftyFive();
         //testFiftyFive();
         //testSeventy();
-        testSeventyFive();
+        //testSeventyFive();
+        testSeventyNine();
     }
 
     private void testOneSum() {
@@ -148,5 +150,13 @@ public class MainActivity extends AppCompatActivity {
             System.out.print(nums[j] + ", ");
         }
         System.out.print("\n");//显示成数组的表现形式
+    }
+
+    private void testSeventyNine() {
+        SeventyNine seventyNine = new SeventyNine();
+        char[][] board = new char[][]{{'a', 'd', 'c'}, {'e', 'd', 'b'},{'a', 'b', 'e'}};
+        String word = "bcd";
+        boolean result = seventyNine.exist(board, word);
+        Log.d("test", "======result: " + result);
     }
 }
