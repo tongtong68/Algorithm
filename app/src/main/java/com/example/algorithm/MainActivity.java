@@ -14,11 +14,12 @@ import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
 import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
+import com.example.algorithm.medium.NinetyEight;
 import com.example.algorithm.medium.SeventyFive;
 import com.example.algorithm.medium.SeventyNine;
 import com.example.algorithm.medium.ThirtyNine;
-import com.example.algorithm.medium.ThirtyOne;
 import com.example.algorithm.medium.ThirtyThree;
+import com.example.algorithm.structure.BinaryTree;
 
 import java.util.List;
 
@@ -41,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         //testFiftyFive();
         //testSeventy();
         //testSeventyFive();
-        testSeventyNine();
+        //testSeventyNine();
+        testNinetyEight();
     }
 
     private void testOneSum() {
@@ -157,6 +159,15 @@ public class MainActivity extends AppCompatActivity {
         char[][] board = new char[][]{{'a', 'd', 'c'}, {'e', 'd', 'b'},{'a', 'b', 'e'}};
         String word = "bcd";
         boolean result = seventyNine.exist(board, word);
+        Log.d("test", "======result: " + result);
+    }
+
+    private void testNinetyEight() {
+        NinetyEight ninetyEight = new NinetyEight();
+        int[] tree = new int[] {5,1,8,0,2,7,9};
+
+        BinaryTree a = new BinaryTree(tree);
+        boolean result = ninetyEight.isValidBST(a.getRoot());
         Log.d("test", "======result: " + result);
     }
 }
