@@ -1,5 +1,7 @@
 package com.example.algorithm.medium;
 
+import com.example.algorithm.structure.BinaryTree;
+
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -10,18 +12,18 @@ public class NinetyFour {
     // 方法一：递归
     // 时间复杂度：O(n)
     // 空间复杂度：O(n)
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(BinaryTree.TreeNode root) {
         List<Integer> result = new ArrayList<Integer>();
         inorder(root, result);
         return result;
     }
 
-    private void inorder(TreeNode root, List<Integer> res) {
+    private void inorder(BinaryTree.TreeNode root, List<Integer> res) {
         if (root == null) {
             return;
         }
         inorder(root.left, res);
-        res.add(root.val);
+        res.add(root.value);
         inorder(root.right, res);
     }
 
@@ -29,16 +31,16 @@ public class NinetyFour {
     // 方法二：栈
     // 时间复杂度：O(n)O(n)
     // 空间复杂度：O(n)O(n)
-    public List<Integer> inorderTraversal2(TreeNode root) {
+    public List<Integer> inorderTraversal2(BinaryTree.TreeNode root) {
         List<Integer> res = new ArrayList<Integer>();
-        Deque<TreeNode> stack = new LinkedList<TreeNode>();
+        Deque<BinaryTree.TreeNode> stack = new LinkedList<BinaryTree.TreeNode>();
         while (root != null || !stack.isEmpty()) {
             while (root != null) {
                 stack.push(root);
                 root = root.left;
             }
             root = stack.pop();
-            res.add(root.val);
+            res.add(root.value);
             root = root.right;
         }
         return res;
@@ -47,9 +49,9 @@ public class NinetyFour {
     // 方法三：Morris 中序遍历
     // 时间复杂度：O(n)O(n)
     // 空间复杂度：O(1)O(1)
-    public List<Integer> inorderTraversal3(TreeNode root) {
+    public List<Integer> inorderTraversal3(BinaryTree.TreeNode root) {
         List<Integer> res = new ArrayList<Integer>();
-        TreeNode predecessor = null;
+        BinaryTree.TreeNode predecessor = null;
 
         while (root != null) {
             if (root.left != null) {
@@ -66,38 +68,17 @@ public class NinetyFour {
                 }
                 // 说明左子树已经访问完了，我们需要断开链接
                 else {
-                    res.add(root.val);
+                    res.add(root.value);
                     predecessor.right = null;
                     root = root.right;
                 }
             }
             // 如果没有左孩子，则直接访问右孩子
             else {
-                res.add(root.val);
+                res.add(root.value);
                 root = root.right;
             }
         }
         return res;
-    }
-
-    public class TreeNode {
-        int val; //数据域
-        TreeNode left; //左小孩
-        TreeNode right; //右小孩
-
-        TreeNode() {
-            left = null;
-            right = null;
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-            left = null;
-            right = null;
-        }
-
-        public void setVal(int val) {
-            this.val = val;
-        }
     }
 }
