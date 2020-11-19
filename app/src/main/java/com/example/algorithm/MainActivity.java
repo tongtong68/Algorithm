@@ -14,6 +14,7 @@ import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
 import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
+import com.example.algorithm.medium.HundredAndTwo;
 import com.example.algorithm.medium.NinetyEight;
 import com.example.algorithm.medium.SeventyFive;
 import com.example.algorithm.medium.SeventyNine;
@@ -43,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
         //testSeventy();
         //testSeventyFive();
         //testSeventyNine();
-        testNinetyEight();
+        //testNinetyEight();
+        testHundredAndTwo();
     }
 
     private void testOneSum() {
@@ -169,5 +171,16 @@ public class MainActivity extends AppCompatActivity {
         BinaryTree a = new BinaryTree(tree);
         boolean result = ninetyEight.isValidBST(a.getRoot());
         Log.d("test", "======result: " + result);
+    }
+
+    private void testHundredAndTwo() {
+        HundredAndTwo hundredAndTwo = new HundredAndTwo();
+        int[] tree = new int[] {5,1,8,0,2,7,9};
+        BinaryTree a = new BinaryTree(tree);
+        List<List<Integer>> b = hundredAndTwo.levelOrder2(a.getRoot());
+        for (int j=0; j<b.size(); ++j) {
+            System.out.print(b.get(j) + ", ");
+        }
+        System.out.print("\n");//显示成数组的表现形式
     }
 }
