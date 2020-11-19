@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.algorithm.difficult.Four;
 import com.example.algorithm.difficult.FourtyTwo;
 import com.example.algorithm.difficult.ThirtyTwo;
+import com.example.algorithm.easy.HundredAndFour;
 import com.example.algorithm.easy.Seventy;
 import com.example.algorithm.easy.Sum;
 import com.example.algorithm.medium.FiftyFive;
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         //testSeventyFive();
         //testSeventyNine();
         //testNinetyEight();
-        testHundredAndTwo();
+        //testHundredAndTwo();
+        testHundredAndFour();
     }
 
     private void testOneSum() {
@@ -182,5 +184,13 @@ public class MainActivity extends AppCompatActivity {
             System.out.print(b.get(j) + ", ");
         }
         System.out.print("\n");//显示成数组的表现形式
+    }
+
+    private void testHundredAndFour() {
+        HundredAndFour hundredAndFour = new HundredAndFour();
+        int[] tree = new int[] {5,1,8,0,2,7,9};
+        BinaryTree a = new BinaryTree(tree);
+        int result = hundredAndFour.maxDepth(a.getRoot());
+        Log.d("test", "======result: " + result);
     }
 }
