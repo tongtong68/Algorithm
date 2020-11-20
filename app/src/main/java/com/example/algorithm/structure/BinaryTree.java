@@ -23,7 +23,7 @@ public class BinaryTree {
         return tn;
     }
 
-    public class TreeNode {
+    public static class TreeNode {
         public int value;
         public TreeNode left;
         public TreeNode right;
