@@ -15,6 +15,7 @@ import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
 import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
+import com.example.algorithm.medium.HundredAndFourteen;
 import com.example.algorithm.medium.HundredAndTwo;
 import com.example.algorithm.medium.NinetyEight;
 import com.example.algorithm.medium.SeventyFive;
@@ -23,6 +24,7 @@ import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyThree;
 import com.example.algorithm.structure.BinaryTree;
 
+import java.net.HttpURLConnection;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -47,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         //testSeventyNine();
         //testNinetyEight();
         //testHundredAndTwo();
-        testHundredAndFour();
+        //testHundredAndFour();
+        testHundredAndFourteen();
     }
 
     private void testOneSum() {
@@ -192,5 +195,15 @@ public class MainActivity extends AppCompatActivity {
         BinaryTree a = new BinaryTree(tree);
         int result = hundredAndFour.maxDepth(a.getRoot());
         Log.d("test", "======result: " + result);
+    }
+
+    private void testHundredAndFourteen() {
+        HundredAndFourteen hundredAndFourteen = new HundredAndFourteen();
+        int[] tree = new int[] {5,1,8,0,2,7,9};
+        BinaryTree a = new BinaryTree(tree);
+        a.show(a.getRoot());
+        BinaryTree b = hundredAndFourteen.getLinkedListTree2(a.getRoot());
+        b.show(b.getRoot());
+
     }
 }
