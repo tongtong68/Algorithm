@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.algorithm.difficult.Four;
 import com.example.algorithm.difficult.FourtyTwo;
+import com.example.algorithm.difficult.HundredAndTwentyEight;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.easy.HundredAndFour;
 import com.example.algorithm.easy.Seventy;
@@ -50,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
         //testNinetyEight();
         //testHundredAndTwo();
         //testHundredAndFour();
-        testHundredAndFourteen();
+        //testHundredAndFourteen();
+        testHundredAndTwentyEight();
     }
 
     private void testOneSum() {
@@ -205,5 +207,12 @@ public class MainActivity extends AppCompatActivity {
         BinaryTree b = hundredAndFourteen.getLinkedListTree2(a.getRoot());
         b.show(b.getRoot());
 
+    }
+
+    private void testHundredAndTwentyEight() {
+        HundredAndTwentyEight hundredAndTwentyEight = new HundredAndTwentyEight();
+        int[] nums = new int[] {1, 4, 5, 3, 12};
+        int result = hundredAndTwentyEight.longestConsecutive(nums);
+        Log.d("test", "======result: " + result);
     }
 }
