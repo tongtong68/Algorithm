@@ -1,7 +1,6 @@
 package com.example.algorithm.easy;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class HundredAndThirtySix {
