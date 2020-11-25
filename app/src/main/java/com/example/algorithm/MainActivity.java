@@ -10,6 +10,7 @@ import com.example.algorithm.difficult.FourtyTwo;
 import com.example.algorithm.difficult.HundredAndTwentyEight;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.easy.HundredAndFour;
+import com.example.algorithm.easy.HundredAndThirtySix;
 import com.example.algorithm.easy.Seventy;
 import com.example.algorithm.easy.Sum;
 import com.example.algorithm.medium.FiftyFive;
@@ -52,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         //testHundredAndTwo();
         //testHundredAndFour();
         //testHundredAndFourteen();
-        testHundredAndTwentyEight();
+        //testHundredAndTwentyEight();
+        testHundredAndThirtySix();
     }
 
     private void testOneSum() {
@@ -213,6 +215,13 @@ public class MainActivity extends AppCompatActivity {
         HundredAndTwentyEight hundredAndTwentyEight = new HundredAndTwentyEight();
         int[] nums = new int[] {1, 4, 5, 3, 12};
         int result = hundredAndTwentyEight.longestConsecutive(nums);
+        Log.d("test", "======result: " + result);
+    }
+
+    private void testHundredAndThirtySix() {
+        HundredAndThirtySix hundredAndThirtySix = new HundredAndThirtySix();
+        int[] nums = new int[] {1, 1, 3, 3, 5, 9, 5};
+        int result = hundredAndThirtySix.getResult2(nums);
         Log.d("test", "======result: " + result);
     }
 }
