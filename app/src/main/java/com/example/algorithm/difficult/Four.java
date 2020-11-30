@@ -1,5 +1,7 @@
 package com.example.algorithm.difficult;
 
+import com.example.algorithm.structure.ListNode;
+
 public class Four {
     private int[] num1;
     private int[] num2;
@@ -12,15 +14,15 @@ public class Four {
         ListNode p1 = new ListNode(num1[i]);
         ListNode p2 = new ListNode(num2[j]);
         for (int m = 0; m < num1.length + num2.length; m++) {
-            if (p1.val <= p2.val) {
-                result[m] = p1.val;
+            if (p1.value <= p2.value) {
+                result[m] = p1.value;
                 if ((i + 1) < num1.length) {
                     p1.next = new ListNode(num1[i + 1]);
                     p1 = p1.next;
                     i++;
                 }
             } else {
-                result[m] = p2.val;
+                result[m] = p2.value;
                 if ((j + 1) < num2.length) {
                     p2.next = new ListNode(num2[j + 1]);
                     p2 = p2.next;
@@ -30,11 +32,5 @@ public class Four {
         }
 
         return result;
-    }
-
-    class ListNode {
-        int val;
-        Four.ListNode next;   // 下一个链表对象
-        ListNode(int x) { val = x; }  //赋值链表的值
     }
 }

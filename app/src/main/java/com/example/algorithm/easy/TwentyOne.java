@@ -1,5 +1,7 @@
 package com.example.algorithm.easy;
 
+import com.example.algorithm.structure.ListNode;
+
 public class TwentyOne {
 
     // 迭代算法
@@ -38,14 +40,6 @@ public class TwentyOne {
         } else {
             b.next = merge2(a, b.next);
             return b;
-        }
-    }
-
-    class ListNode {
-        int value;
-        ListNode next;
-        ListNode(int value) {
-            this.value = value;
         }
     }
 }

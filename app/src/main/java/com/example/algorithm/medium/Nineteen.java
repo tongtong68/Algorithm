@@ -1,5 +1,7 @@
 package com.example.algorithm.medium;
 
+import com.example.algorithm.structure.ListNode;
+
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -43,18 +45,5 @@ public class Nineteen {
         prev.next = prev.next.next;
         ListNode ans = dummy.next;
         return ans;
-    }
-
-    class ListNode {
-        int value;
-        ListNode next;
-        ListNode(int value) {
-            this.value = value;
-        }
-
-        public ListNode(int value, ListNode next) {
-            this.value = value;
-            this.next = next;
-        }
     }
 }
