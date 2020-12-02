@@ -17,6 +17,7 @@ import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
 import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
+import com.example.algorithm.medium.HundredAndFiftyTwo;
 import com.example.algorithm.medium.HundredAndFourteen;
 import com.example.algorithm.medium.HundredAndTwo;
 import com.example.algorithm.medium.NinetyEight;
@@ -54,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
         //testHundredAndFour();
         //testHundredAndFourteen();
         //testHundredAndTwentyEight();
-        testHundredAndThirtySix();
+        //testHundredAndThirtySix();
+        testHundredAndFiftyTwo();
     }
 
     private void testOneSum() {
@@ -222,6 +224,14 @@ public class MainActivity extends AppCompatActivity {
         HundredAndThirtySix hundredAndThirtySix = new HundredAndThirtySix();
         int[] nums = new int[] {1, 1, 3, 3, 5, 9, 5};
         int result = hundredAndThirtySix.getResult2(nums);
+        Log.d("test", "======result: " + result);
+    }
+
+    private void testHundredAndFiftyTwo() {
+        HundredAndFiftyTwo hundredAndFiftyTwo = new HundredAndFiftyTwo();
+        int[] nums = new int[] {1, 1, -3, 1, 5, -3, 5};
+        int result = hundredAndFiftyTwo.maxProduct(nums);
+
         Log.d("test", "======result: " + result);
     }
 }
