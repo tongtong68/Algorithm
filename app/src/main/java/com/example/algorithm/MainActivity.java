@@ -10,6 +10,7 @@ import com.example.algorithm.difficult.FourtyTwo;
 import com.example.algorithm.difficult.HundredAndTwentyEight;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.easy.HundredAndFour;
+import com.example.algorithm.easy.HundredAndSixtyNine;
 import com.example.algorithm.easy.HundredAndThirtySix;
 import com.example.algorithm.easy.Seventy;
 import com.example.algorithm.easy.Sum;
@@ -19,6 +20,7 @@ import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
 import com.example.algorithm.medium.HundredAndFiftyTwo;
 import com.example.algorithm.medium.HundredAndFourteen;
+import com.example.algorithm.medium.HundredAndThirtyNine;
 import com.example.algorithm.medium.HundredAndTwo;
 import com.example.algorithm.medium.NinetyEight;
 import com.example.algorithm.medium.SeventyFive;
@@ -56,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         //testHundredAndFourteen();
         //testHundredAndTwentyEight();
         //testHundredAndThirtySix();
-        testHundredAndFiftyTwo();
+        //testHundredAndFiftyTwo();
+        testHundredAndSixtyNine();
     }
 
     private void testOneSum() {
@@ -232,6 +235,13 @@ public class MainActivity extends AppCompatActivity {
         int[] nums = new int[] {1, 1, -3, 1, 5, -3, 5};
         int result = hundredAndFiftyTwo.maxProduct(nums);
 
+        Log.d("test", "======result: " + result);
+    }
+
+    private void testHundredAndSixtyNine() {
+        HundredAndSixtyNine hundredAndSixtyNine = new HundredAndSixtyNine();
+        int[] nums = new int[] {2, 2, 3, 3, 5, 5, 5, 3, 3, 1, 4};
+        int result = hundredAndSixtyNine.getMultipleNum(nums);
         Log.d("test", "======result: " + result);
     }
 }
