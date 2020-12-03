@@ -1,4 +1,4 @@
-package com.example.algorithm.difficult;
+package com.example.algorithm.easy;
 
 import java.util.Deque;
 import java.util.LinkedList;
