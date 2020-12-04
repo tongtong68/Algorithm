@@ -14,6 +14,7 @@ import com.example.algorithm.easy.HundredAndSixtyNine;
 import com.example.algorithm.easy.HundredAndThirtySix;
 import com.example.algorithm.easy.Seventy;
 import com.example.algorithm.easy.Sum;
+import com.example.algorithm.easy.TwoHundredAndSix;
 import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
 import com.example.algorithm.medium.FortyEight;
@@ -28,8 +29,10 @@ import com.example.algorithm.medium.SeventyNine;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyThree;
 import com.example.algorithm.structure.BinaryTree;
+import com.example.algorithm.structure.ListNode;
 
 import java.net.HttpURLConnection;
+import java.util.LinkedList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -59,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         //testHundredAndTwentyEight();
         //testHundredAndThirtySix();
         //testHundredAndFiftyTwo();
-        testHundredAndSixtyNine();
+        //testHundredAndSixtyNine();
+        testTwoHundredAndSix();
     }
 
     private void testOneSum() {
@@ -241,7 +245,22 @@ public class MainActivity extends AppCompatActivity {
     private void testHundredAndSixtyNine() {
         HundredAndSixtyNine hundredAndSixtyNine = new HundredAndSixtyNine();
         int[] nums = new int[] {2, 2, 3, 3, 5, 5, 5, 3, 3, 1, 4};
-        int result = hundredAndSixtyNine.getMultipleNum(nums);
+        int result = hundredAndSixtyNine.majorityElement(nums);
         Log.d("test", "======result: " + result);
+    }
+
+    private void testTwoHundredAndSix() {
+        TwoHundredAndSix twoHundredAndSix = new TwoHundredAndSix();
+        ListNode head = ListNode.createListFromArray(new int[]{1, 2, 3, 4, 5});
+//        while (head != null) {
+//            Log.d("test", head.value + ", ");
+//            head = head.next;
+//        }
+
+        ListNode reverse = twoHundredAndSix.getReverse(head);
+        while (reverse != null && reverse.value != 0) {
+            Log.d("test", reverse.value + ", ");
+            reverse = reverse.next;
+        }
     }
 }
