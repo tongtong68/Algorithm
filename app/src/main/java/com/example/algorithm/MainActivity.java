@@ -28,6 +28,7 @@ import com.example.algorithm.medium.SeventyFive;
 import com.example.algorithm.medium.SeventyNine;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyThree;
+import com.example.algorithm.medium.TwoHundredAndFifteen;
 import com.example.algorithm.structure.BinaryTree;
 import com.example.algorithm.structure.ListNode;
 
@@ -63,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
         //testHundredAndThirtySix();
         //testHundredAndFiftyTwo();
         //testHundredAndSixtyNine();
-        testTwoHundredAndSix();
+        //testTwoHundredAndSix();
+        testTwoHundredAndFifteen();
     }
 
     private void testOneSum() {
@@ -262,5 +264,16 @@ public class MainActivity extends AppCompatActivity {
             Log.d("test", reverse.value + ", ");
             reverse = reverse.next;
         }
+    }
+
+    private void testTwoHundredAndFifteen() {
+        TwoHundredAndFifteen twoHundredAndFifteen = new TwoHundredAndFifteen();
+        int[] nums = new int[]{3, 5, 8, 11, 4, 0, 7, 2, 9};
+        twoHundredAndFifteen.quickSort(nums);
+        for (int j=0; j<nums.length; ++j) {
+            System.out.print(nums[j] + ", ");
+        }
+        System.out.print("\n");//显示成数组的表现形式
+
     }
 }
