@@ -15,6 +15,7 @@ import com.example.algorithm.easy.HundredAndThirtySix;
 import com.example.algorithm.easy.Seventy;
 import com.example.algorithm.easy.Sum;
 import com.example.algorithm.easy.TwoHundredAndSix;
+import com.example.algorithm.easy.TwoHundredAndTwentySix;
 import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
 import com.example.algorithm.medium.FortyEight;
@@ -65,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
         //testHundredAndFiftyTwo();
         //testHundredAndSixtyNine();
         //testTwoHundredAndSix();
-        testTwoHundredAndFifteen();
+        //testTwoHundredAndFifteen();
+        testTwoHundredAndTwentySix();
     }
 
     private void testOneSum() {
@@ -275,5 +277,14 @@ public class MainActivity extends AppCompatActivity {
         }
         System.out.print("\n");//显示成数组的表现形式
 
+    }
+
+    private void testTwoHundredAndTwentySix() {
+        TwoHundredAndTwentySix twoHundredAndTwentySix = new TwoHundredAndTwentySix();
+        int[] tree = new int[] {5,1,8,0,2,7,9};
+        BinaryTree a = new BinaryTree(tree);
+        a.show(a.getRoot());
+        twoHundredAndTwentySix.reverseTree(a.getRoot());
+        a.show(a.getRoot());
     }
 }
