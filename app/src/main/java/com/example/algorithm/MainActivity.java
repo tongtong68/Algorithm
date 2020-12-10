@@ -15,6 +15,7 @@ import com.example.algorithm.easy.HundredAndThirtySix;
 import com.example.algorithm.easy.Seventy;
 import com.example.algorithm.easy.Sum;
 import com.example.algorithm.easy.TwoHundredAndSix;
+import com.example.algorithm.easy.TwoHundredAndThirtyFour;
 import com.example.algorithm.easy.TwoHundredAndTwentySix;
 import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
@@ -67,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
         //testHundredAndSixtyNine();
         //testTwoHundredAndSix();
         //testTwoHundredAndFifteen();
-        testTwoHundredAndTwentySix();
+        //testTwoHundredAndTwentySix();
+        testTwoHundredAndThirtyFour();
     }
 
     private void testOneSum() {
@@ -286,5 +288,13 @@ public class MainActivity extends AppCompatActivity {
         a.show(a.getRoot());
         twoHundredAndTwentySix.reverseTree(a.getRoot());
         a.show(a.getRoot());
+    }
+
+    private void testTwoHundredAndThirtyFour() {
+        TwoHundredAndThirtyFour twoHundredAndThirtyFour = new TwoHundredAndThirtyFour();
+        int[] nums = new int[] {1, 2, 2, 1};
+        ListNode a = ListNode.createListFromArray(nums);
+        boolean result = twoHundredAndThirtyFour.isReverseWord(a);
+        Log.d("test", "=========result: " + result);
     }
 }
