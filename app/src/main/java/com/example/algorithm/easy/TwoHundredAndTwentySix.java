@@ -15,8 +15,6 @@ public class TwoHundredAndTwentySix {
         reverseTree(root.left);
         reverseTree(root.right);
 
-        swap(root.left, root.right);
-
         BinaryTree.TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
