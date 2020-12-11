@@ -31,6 +31,7 @@ import com.example.algorithm.medium.SeventyNine;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyThree;
 import com.example.algorithm.medium.TwoHundredAndFifteen;
+import com.example.algorithm.medium.TwoHundredAndThirtyEight;
 import com.example.algorithm.structure.BinaryTree;
 import com.example.algorithm.structure.ListNode;
 
@@ -69,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
         //testTwoHundredAndSix();
         //testTwoHundredAndFifteen();
         //testTwoHundredAndTwentySix();
-        testTwoHundredAndThirtyFour();
+        //testTwoHundredAndThirtyFour();
+        testTwoHundredAndThirtyEight();
     }
 
     private void testOneSum() {
@@ -296,5 +298,15 @@ public class MainActivity extends AppCompatActivity {
         ListNode a = ListNode.createListFromArray(nums);
         boolean result = twoHundredAndThirtyFour.isReverseWord(a);
         Log.d("test", "=========result: " + result);
+    }
+
+    private void testTwoHundredAndThirtyEight() {
+        TwoHundredAndThirtyEight twoHundredAndThirtyEight = new TwoHundredAndThirtyEight();
+        int[] nums = new int[] {1, 2, 3, 3, 1};
+        int[] result = twoHundredAndThirtyEight.getMultiply(nums);
+        for (int j=0; j<result.length; ++j) {
+            System.out.print(result[j] + ", ");
+        }
+        System.out.print("\n");//显示成数组的表现形式
     }
 }
