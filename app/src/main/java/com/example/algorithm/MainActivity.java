@@ -14,6 +14,7 @@ import com.example.algorithm.easy.HundredAndSixtyNine;
 import com.example.algorithm.easy.HundredAndThirtySix;
 import com.example.algorithm.easy.Seventy;
 import com.example.algorithm.easy.Sum;
+import com.example.algorithm.easy.TwoHundredAndEighty;
 import com.example.algorithm.easy.TwoHundredAndSix;
 import com.example.algorithm.easy.TwoHundredAndThirtyFour;
 import com.example.algorithm.easy.TwoHundredAndTwentySix;
@@ -71,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
         //testTwoHundredAndFifteen();
         //testTwoHundredAndTwentySix();
         //testTwoHundredAndThirtyFour();
-        testTwoHundredAndThirtyEight();
+        //testTwoHundredAndThirtyEight();
+        testTwoHundredAndEighty();
     }
 
     private void testOneSum() {
@@ -306,6 +308,17 @@ public class MainActivity extends AppCompatActivity {
         int[] result = twoHundredAndThirtyEight.getMultiply(nums);
         for (int j=0; j<result.length; ++j) {
             System.out.print(result[j] + ", ");
+        }
+        System.out.print("\n");//显示成数组的表现形式
+    }
+
+    private void testTwoHundredAndEighty() {
+        TwoHundredAndEighty twoHundredAndEighty = new TwoHundredAndEighty();
+        int[] nums = new int[] {1, 0, 2, 3, 0, 1};
+        twoHundredAndEighty.moveZeroes(nums);
+        Log.d("test", "=========result: ");
+        for (int j=0; j<nums.length; ++j) {
+            System.out.print(nums[j] + ", ");
         }
         System.out.print("\n");//显示成数组的表现形式
     }
