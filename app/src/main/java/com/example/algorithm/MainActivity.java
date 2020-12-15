@@ -9,6 +9,7 @@ import com.example.algorithm.difficult.Four;
 import com.example.algorithm.difficult.FourtyTwo;
 import com.example.algorithm.difficult.HundredAndTwentyEight;
 import com.example.algorithm.difficult.ThirtyTwo;
+import com.example.algorithm.difficult.TwoHundredAndNinetySeven;
 import com.example.algorithm.easy.HundredAndFour;
 import com.example.algorithm.easy.HundredAndSixtyNine;
 import com.example.algorithm.easy.HundredAndThirtySix;
@@ -31,6 +32,7 @@ import com.example.algorithm.medium.SeventyFive;
 import com.example.algorithm.medium.SeventyNine;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyThree;
+import com.example.algorithm.medium.TwoHundredAndEightySeven;
 import com.example.algorithm.medium.TwoHundredAndFifteen;
 import com.example.algorithm.medium.TwoHundredAndThirtyEight;
 import com.example.algorithm.structure.BinaryTree;
@@ -73,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
         //testTwoHundredAndTwentySix();
         //testTwoHundredAndThirtyFour();
         //testTwoHundredAndThirtyEight();
-        testTwoHundredAndEighty();
+        //testTwoHundredAndEighty();
+        //testTwoHundredAndEightySeven();
+        testTwoHundredAndNinetySeven();
     }
 
     private void testOneSum() {
@@ -321,5 +325,24 @@ public class MainActivity extends AppCompatActivity {
             System.out.print(nums[j] + ", ");
         }
         System.out.print("\n");//显示成数组的表现形式
+    }
+
+    private void testTwoHundredAndEightySeven() {
+        TwoHundredAndEightySeven twoHundredAndEightySeven = new TwoHundredAndEightySeven();
+        int[] nums = new int[] {1, 2, 2, 3, 4, 5};
+        int result = twoHundredAndEightySeven.searchDuplicate(nums);
+        Log.d("test", "=========result: " + result);
+    }
+
+    private void testTwoHundredAndNinetySeven() {
+        TwoHundredAndNinetySeven twoHundredAndNinetySeven = new TwoHundredAndNinetySeven();
+        int[] tree = new int[] {5,1,8};
+        BinaryTree a = new BinaryTree(tree);
+        a.show(a.getRoot());
+        String serialize = twoHundredAndNinetySeven.serialize(a.getRoot());
+        Log.d("test", "=========result: " + serialize);
+        BinaryTree.TreeNode temp = twoHundredAndNinetySeven.deserialize(serialize);
+        BinaryTree b = new BinaryTree(temp);
+        b.show(b.getRoot());
     }
 }
