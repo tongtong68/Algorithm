@@ -32,6 +32,7 @@ import com.example.algorithm.medium.SeventyFive;
 import com.example.algorithm.medium.SeventyNine;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyThree;
+import com.example.algorithm.medium.ThreeHundredAndTwentyTwo;
 import com.example.algorithm.medium.TwoHundredAndEightySeven;
 import com.example.algorithm.medium.TwoHundredAndFifteen;
 import com.example.algorithm.medium.TwoHundredAndThirtyEight;
@@ -77,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
         //testTwoHundredAndThirtyEight();
         //testTwoHundredAndEighty();
         //testTwoHundredAndEightySeven();
-        testTwoHundredAndNinetySeven();
+        //testTwoHundredAndNinetySeven();
+        testThreeHundredAndTwentyTwo();
     }
 
     private void testOneSum() {
@@ -344,5 +346,13 @@ public class MainActivity extends AppCompatActivity {
         BinaryTree.TreeNode temp = twoHundredAndNinetySeven.deserialize(serialize);
         BinaryTree b = new BinaryTree(temp);
         b.show(b.getRoot());
+    }
+
+    private void testThreeHundredAndTwentyTwo() {
+        ThreeHundredAndTwentyTwo threeHundredAndTwentyTwo = new ThreeHundredAndTwentyTwo();
+        int[] coins = new int[] {186, 419, 83, 408};
+        int amount = 6249;
+        int result = threeHundredAndTwentyTwo.coinChange(coins, amount);
+        Log.d("test", "=========result: " + result);
     }
 }
