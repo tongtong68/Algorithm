@@ -32,6 +32,7 @@ import com.example.algorithm.medium.SeventyFive;
 import com.example.algorithm.medium.SeventyNine;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyThree;
+import com.example.algorithm.medium.ThreeHundredAndThirtySeven;
 import com.example.algorithm.medium.ThreeHundredAndTwentyTwo;
 import com.example.algorithm.medium.TwoHundredAndEightySeven;
 import com.example.algorithm.medium.TwoHundredAndFifteen;
@@ -79,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
         //testTwoHundredAndEighty();
         //testTwoHundredAndEightySeven();
         //testTwoHundredAndNinetySeven();
-        testThreeHundredAndTwentyTwo();
+        //testThreeHundredAndTwentyTwo();
+        testThreeHundredAndThirtySeven();
     }
 
     private void testOneSum() {
@@ -353,6 +355,15 @@ public class MainActivity extends AppCompatActivity {
         int[] coins = new int[] {186, 419, 83, 408};
         int amount = 6249;
         int result = threeHundredAndTwentyTwo.coinChange(coins, amount);
+        Log.d("test", "=========result: " + result);
+    }
+
+    private void testThreeHundredAndThirtySeven() {
+        ThreeHundredAndThirtySeven threeHundredAndThirtySeven = new ThreeHundredAndThirtySeven();
+        int[] tree = new int[] {5,1,8,0,2,7,9};
+        BinaryTree a = new BinaryTree(tree);
+        a.show(a.getRoot());
+        int result = threeHundredAndThirtySeven.getMaxValue(a.getRoot());
         Log.d("test", "=========result: " + result);
     }
 }
