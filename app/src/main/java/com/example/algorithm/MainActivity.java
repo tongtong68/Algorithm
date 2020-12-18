@@ -32,6 +32,7 @@ import com.example.algorithm.medium.SeventyFive;
 import com.example.algorithm.medium.SeventyNine;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyThree;
+import com.example.algorithm.medium.ThreeHundredAndThirtyEight;
 import com.example.algorithm.medium.ThreeHundredAndThirtySeven;
 import com.example.algorithm.medium.ThreeHundredAndTwentyTwo;
 import com.example.algorithm.medium.TwoHundredAndEightySeven;
@@ -81,7 +82,8 @@ public class MainActivity extends AppCompatActivity {
         //testTwoHundredAndEightySeven();
         //testTwoHundredAndNinetySeven();
         //testThreeHundredAndTwentyTwo();
-        testThreeHundredAndThirtySeven();
+        //testThreeHundredAndThirtySeven();
+        testThreeHundredAndThirtyEight();
     }
 
     private void testOneSum() {
@@ -365,5 +367,14 @@ public class MainActivity extends AppCompatActivity {
         a.show(a.getRoot());
         int result = threeHundredAndThirtySeven.getMaxValue(a.getRoot());
         Log.d("test", "=========result: " + result);
+    }
+
+    private void testThreeHundredAndThirtyEight() {
+        ThreeHundredAndThirtyEight threeHundredAndThirtyEight = new ThreeHundredAndThirtyEight();
+        int[] result = threeHundredAndThirtyEight.countBits(4);
+        for (int j=0; j<result.length; ++j) {
+            System.out.print(result[j] + ", ");
+        }
+        System.out.print("\n");//显示成数组的表现形式
     }
 }
