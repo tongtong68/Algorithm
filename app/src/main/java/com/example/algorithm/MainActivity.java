@@ -32,6 +32,7 @@ import com.example.algorithm.medium.SeventyFive;
 import com.example.algorithm.medium.SeventyNine;
 import com.example.algorithm.medium.ThirtyNine;
 import com.example.algorithm.medium.ThirtyThree;
+import com.example.algorithm.medium.ThreeHundredAndFortySeven;
 import com.example.algorithm.medium.ThreeHundredAndThirtyEight;
 import com.example.algorithm.medium.ThreeHundredAndThirtySeven;
 import com.example.algorithm.medium.ThreeHundredAndTwentyTwo;
@@ -83,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
         //testTwoHundredAndNinetySeven();
         //testThreeHundredAndTwentyTwo();
         //testThreeHundredAndThirtySeven();
-        testThreeHundredAndThirtyEight();
+        //testThreeHundredAndThirtyEight();
+        testThreeHundredAndFortySeven();
     }
 
     private void testOneSum() {
@@ -372,6 +374,16 @@ public class MainActivity extends AppCompatActivity {
     private void testThreeHundredAndThirtyEight() {
         ThreeHundredAndThirtyEight threeHundredAndThirtyEight = new ThreeHundredAndThirtyEight();
         int[] result = threeHundredAndThirtyEight.countBits(4);
+        for (int j=0; j<result.length; ++j) {
+            System.out.print(result[j] + ", ");
+        }
+        System.out.print("\n");//显示成数组的表现形式
+    }
+
+    private void testThreeHundredAndFortySeven() {
+        ThreeHundredAndFortySeven threeHundredAndFortySeven = new ThreeHundredAndFortySeven();
+        int[] nums = new int[]{1, 2};
+        int[] result = threeHundredAndFortySeven.getHighestFrequencyNum(nums, 2);
         for (int j=0; j<result.length; ++j) {
             System.out.print(result[j] + ", ");
         }
