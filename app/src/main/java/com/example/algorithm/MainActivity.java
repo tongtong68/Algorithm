@@ -1,8 +1,10 @@
 package com.example.algorithm;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.algorithm.difficult.Four;
@@ -23,6 +25,7 @@ import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
 import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
+import com.example.algorithm.medium.FourHundredAndSix;
 import com.example.algorithm.medium.HundredAndFiftyTwo;
 import com.example.algorithm.medium.HundredAndFourteen;
 import com.example.algorithm.medium.HundredAndThirtyNine;
@@ -43,6 +46,7 @@ import com.example.algorithm.structure.BinaryTree;
 import com.example.algorithm.structure.ListNode;
 
 import java.net.HttpURLConnection;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -85,7 +89,8 @@ public class MainActivity extends AppCompatActivity {
         //testThreeHundredAndTwentyTwo();
         //testThreeHundredAndThirtySeven();
         //testThreeHundredAndThirtyEight();
-        testThreeHundredAndFortySeven();
+        //testThreeHundredAndFortySeven();
+        testFourHundredAndSix();
     }
 
     private void testOneSum() {
@@ -380,12 +385,23 @@ public class MainActivity extends AppCompatActivity {
         System.out.print("\n");//显示成数组的表现形式
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void testThreeHundredAndFortySeven() {
         ThreeHundredAndFortySeven threeHundredAndFortySeven = new ThreeHundredAndFortySeven();
         int[] nums = new int[]{1, 2};
         int[] result = threeHundredAndFortySeven.getHighestFrequencyNum(nums, 2);
         for (int j=0; j<result.length; ++j) {
             System.out.print(result[j] + ", ");
+        }
+        System.out.print("\n");//显示成数组的表现形式
+    }
+
+    private void testFourHundredAndSix() {
+        FourHundredAndSix fourHundredAndSix = new FourHundredAndSix();
+        int[][] people = new int[][]{{7,0}, {4,4}, {7,1}, {5,0}, {6,1}, {5,2}};
+        int[][] result = fourHundredAndSix.reconstructQueue(people);
+        for (int j=0; j<result.length; ++j) {
+            System.out.println(Arrays.toString(result[j]));
         }
         System.out.print("\n");//显示成数组的表现形式
     }
