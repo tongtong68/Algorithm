@@ -12,6 +12,7 @@ import com.example.algorithm.difficult.FourtyTwo;
 import com.example.algorithm.difficult.HundredAndTwentyEight;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.difficult.TwoHundredAndNinetySeven;
+import com.example.algorithm.easy.FourHundredAndFortyEight;
 import com.example.algorithm.easy.HundredAndFour;
 import com.example.algorithm.easy.HundredAndSixtyNine;
 import com.example.algorithm.easy.HundredAndThirtySix;
@@ -90,7 +91,8 @@ public class MainActivity extends AppCompatActivity {
         //testThreeHundredAndThirtySeven();
         //testThreeHundredAndThirtyEight();
         //testThreeHundredAndFortySeven();
-        testFourHundredAndSix();
+        //testFourHundredAndSix();
+        testFourHundredAndFortyEight();
     }
 
     private void testOneSum() {
@@ -404,5 +406,15 @@ public class MainActivity extends AppCompatActivity {
             System.out.println(Arrays.toString(result[j]));
         }
         System.out.print("\n");//显示成数组的表现形式
+    }
+
+    private void testFourHundredAndFortyEight() {
+        FourHundredAndFortyEight fourHundredAndFortyEight = new FourHundredAndFortyEight();
+        int[] a = new int[]{4, 3, 2, 2};
+        List<Integer> result = fourHundredAndFortyEight.findDisappearedNumbers(a);
+//        for (int j=0; j<result.size(); ++j) {
+//            System.out.print(result.get(j) + ", ");
+//        }
+//        System.out.print("\n");//显示成数组的表现形式
     }
 }

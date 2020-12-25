@@ -9,6 +9,8 @@ import java.util.Map;
 public class FourHundredAndThirtyEight {
 
     // 暴力解法
+    // 时间复杂度：O(pLength * sLength)
+    // 空间复杂度：O(1)
     public List<Integer> getSubStringIndex(String s, String p) {
         List<Integer> res = new ArrayList<>();
         Map<Character, Integer> chas = new HashMap<>();
@@ -33,31 +35,34 @@ public class FourHundredAndThirtyEight {
     }
 
     // 滑动窗口
+    // 时间复杂度：O(n)
+    // 空间复杂度：O(1)
     public List<Integer> findAnagrams(String s, String p) {
-        List<Integer> ans = new ArrayList<>();
-        if (s.length() == 0 || p.length() == 0) return ans;
+        // 先对目标串p每个字符进行字符计数，统计出每个字符的出现次数
+        int pLength = p.length();
+        int sLength = s.length();
 
-        int[] dict = new int[26];
-        for (int i = 0; i < p.length(); i++) {
-            dict[p.charAt(i) - 'a'] += 1;
+        int[] counts = new int[26];
+        for (int i = 0; i < pLength; i++) {
+            counts[p.charAt(i) - 'a']++;
         }
 
-        int[] window = new int[26];
-        int left = 0;
-        int right = 0;
-        while (right < s.length()) {
+        ArrayList<Integer> res = new ArrayList<>();  // 存储结果的结果集
+
+        int[] tempCounts = new int[26]; // 记录窗口内每种字符的出现次数
+        int left = 0, right = 0;
+        while (right < sLength) {
             int curR = s.charAt(right) - 'a';
-            right++;
-            window[curR] += 1;
-            while (window[curR] > dict[curR]) {
-                int curL = s.charAt(left) - 'a';
-                window[curL] -= 1;
-                left++;
+            tempCounts[curR]++;        // curR字符的出现次数加一
+            right++;    // 新增一个字符后，窗口右指针右移一位
+            while (tempCounts[curR] > counts[curR]) { // 不断缩小窗口大小，直到把超标字符移出去一个，使得不超标
+                tempCounts[s.charAt(left) - 'a']--;
+                left++;     // 移走一个字符后窗口左指针右移一位
             }
-            if (right - left == p.length()) {
-                ans.add(left);
+            if (right - left == pLength) {
+                res.add(left);
             }
         }
-        return ans;
+        return res;
     }
 }
