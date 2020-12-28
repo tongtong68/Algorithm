@@ -13,6 +13,7 @@ import com.example.algorithm.difficult.HundredAndTwentyEight;
 import com.example.algorithm.difficult.ThirtyTwo;
 import com.example.algorithm.difficult.TwoHundredAndNinetySeven;
 import com.example.algorithm.easy.FourHundredAndFortyEight;
+import com.example.algorithm.easy.FourHundredAndSixtyOne;
 import com.example.algorithm.easy.HundredAndFour;
 import com.example.algorithm.easy.HundredAndSixtyNine;
 import com.example.algorithm.easy.HundredAndThirtySix;
@@ -92,7 +93,8 @@ public class MainActivity extends AppCompatActivity {
         //testThreeHundredAndThirtyEight();
         //testThreeHundredAndFortySeven();
         //testFourHundredAndSix();
-        testFourHundredAndFortyEight();
+        //testFourHundredAndFortyEight();
+        testFourHundredAndSixtyOne();
     }
 
     private void testOneSum() {
@@ -416,5 +418,11 @@ public class MainActivity extends AppCompatActivity {
 //            System.out.print(result.get(j) + ", ");
 //        }
 //        System.out.print("\n");//显示成数组的表现形式
+    }
+
+    private void testFourHundredAndSixtyOne() {
+        FourHundredAndSixtyOne fourHundredAndSixtyOne = new FourHundredAndSixtyOne();
+        int result = fourHundredAndSixtyOne.getHanMingDistance(1, 4);
+        Log.d("test", "=========result: " + result);
     }
 }
