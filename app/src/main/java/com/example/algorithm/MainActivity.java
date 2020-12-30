@@ -25,6 +25,7 @@ import com.example.algorithm.easy.TwoHundredAndThirtyFour;
 import com.example.algorithm.easy.TwoHundredAndTwentySix;
 import com.example.algorithm.medium.FiftyFive;
 import com.example.algorithm.medium.Five;
+import com.example.algorithm.medium.FiveHundredAndEightyOne;
 import com.example.algorithm.medium.FortyEight;
 import com.example.algorithm.medium.FortySix;
 import com.example.algorithm.medium.FourHundredAndSix;
@@ -94,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
         //testThreeHundredAndFortySeven();
         //testFourHundredAndSix();
         //testFourHundredAndFortyEight();
-        testFourHundredAndSixtyOne();
+        //testFourHundredAndSixtyOne();
+        testFiveHundredAndEightyOne();
     }
 
     private void testOneSum() {
@@ -423,6 +425,13 @@ public class MainActivity extends AppCompatActivity {
     private void testFourHundredAndSixtyOne() {
         FourHundredAndSixtyOne fourHundredAndSixtyOne = new FourHundredAndSixtyOne();
         int result = fourHundredAndSixtyOne.getHanMingDistance(1, 4);
+        Log.d("test", "=========result: " + result);
+    }
+
+    private void testFiveHundredAndEightyOne() {
+        FiveHundredAndEightyOne fiveHundredAndEightyOne = new FiveHundredAndEightyOne();
+        int[] a = new int[]{2, 6, 4, 8, 10, 9, 15};
+        int result = fiveHundredAndEightyOne.findUnsortedSubarray2(a);
         Log.d("test", "=========result: " + result);
     }
 }
